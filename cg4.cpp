@@ -1,9 +1,7 @@
         #include <stdlib.h>
 #include <GL/glut.h>
-GLfloat vertices[][3] = {{-1,-1,-1},{1,-1,-1},{1,1,-1},{-1,1,-1},{-1,-1,1},{1,-1
-,1}, {1,1,1},{-1,1,1}};
-GLfloat colors[][3] = {{1,0,0},{1,1,0},{0,1,0},{0,0,1},{1,0,1},{1,1,1},{0,1,1},{
-0.5,0.5,0.5}};
+GLfloat vertices[][3] = {{-1,-1,-1},{1,-1,-1},{1,1,-1},{-1,1,-1},{-1,-1,1},{1,-1,1}, {1,1,1},{-1,1,1}};
+GLfloat colors[][3] = {{1,0,0},{1,1,0},{0,1,0},{0,0,1},{1,0,1},{1,1,1},{0,1,1},{0.5,0.5,0.5}};
  
 void polygon(int a, int b, int c , int d)
 {
@@ -49,7 +47,8 @@ void mouse(int btn, int state, int x, int y)
         if(btn==GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) axis = 1;
         if(btn==GLUT_RIGHT_BUTTON && state == GLUT_DOWN) axis = 2;
         theta[axis] += 2.0;
-        if( theta[axis] > 360.0 ) theta[axis] -= 360.0;
+        if( theta[axis] > 360.0 ) 
+        theta[axis] -= 360.0;
         display();
 }
  
@@ -69,13 +68,9 @@ void myReshape(int w, int h)
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
         if(w<=h)
-        glFrustum(-2.0, 2.0, -2.0 * (GLfloat) h/ (GLfloat) w, 2.0* (GLfloat) h /
- (GLfloat) w,2.0,
-        20.0);
+        glFrustum(-2.0, 2.0, -2.0 * (GLfloat) h/ (GLfloat) w, 2.0* (GLfloat) h /(GLfloat) w,2.0,20.0);
         else
-        glFrustum(-2.0, 2.0, -2.0 * (GLfloat) w/ (GLfloat) h, 2.0* (GLfloat) w /
- (GLfloat) h, 2.0,
-        20.0);
+        glFrustum(-2.0, 2.0, -2.0 * (GLfloat) w/ (GLfloat) h, 2.0* (GLfloat) w /(GLfloat) h, 2.0,20.0);
         glMatrixMode(GL_MODELVIEW);
 }
 int main(int argc, char **argv)
@@ -91,4 +86,3 @@ int main(int argc, char **argv)
         glEnable(GL_DEPTH_TEST);
         glutMainLoop();
 }
-            
