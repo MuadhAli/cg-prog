@@ -5,3 +5,5 @@ g++ cg2.cpp -lGL -lGLU -lglut
 
 
 git add . && git commit -m "updatd the prog" && git push
+
+
