@@ -46,7 +46,7 @@ void display()
  
         glTranslatef(trX,trY,0.0);
         glRotatef(th,0.0,0.0,1.0);
-glTranslatef(-trX,-trY,0.0);
+        glTranslatef(-trX,-trY,0.0);
         triangle();
         glutPostRedisplay();
         glutSwapBuffers();
