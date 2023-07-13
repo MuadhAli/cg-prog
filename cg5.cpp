@@ -104,14 +104,12 @@ void CohenSutherland(double x0, double y0, double x1, double y1)
 void display()
 {
     double x0 = 60, y0 = 20, x1 = 80, y1 = 120;
-
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(1.0, 1.0, 1.0);
     glBegin(GL_LINES);
     glVertex2d(x0, y0);
     glVertex2d(x1, y1);
     glEnd();
-
     glColor3f(1.0, 1.0, 1.0);
     glBegin(GL_LINE_LOOP);
     glVertex2f(xmin, ymin);
@@ -119,7 +117,6 @@ void display()
     glVertex2f(xmax, ymax);
     glVertex2f(xmin, ymax);
     glEnd();
-
     CohenSutherland(x0, y0, x1, y1);
 
     glFlush();

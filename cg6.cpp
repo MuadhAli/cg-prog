@@ -6,7 +6,7 @@
                 glutSolidTeapot(0.2);
                 glPopMatrix();
         }
-         
+
         void tableTop(GLfloat x,GLfloat y,GLfloat z)
         {
                 glPushMatrix();
@@ -81,6 +81,8 @@
                 glOrtho(-1.0,1.0,-1.0,1.0,-1.0,10.0);
                 glMatrixMode(GL_MODELVIEW);
         }
+
+
         int main(int argc,char **argv)
         {
                 glutInit(&argc,argv);
@@ -97,4 +99,3 @@
                 glEnable(GL_DEPTH_TEST);
                 glutMainLoop();
         }
-              
